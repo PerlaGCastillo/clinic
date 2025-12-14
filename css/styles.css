@@ -1,0 +1,149 @@
+:root {
+  --primary: #6bbf8e;
+  --bg-light: #f4f9f6;
+  --text: #1a1a1a;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* Header */
+.header {
+  border-bottom: 1px solid #ddd;
+}
+
+.header-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  margin-right: 16px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.logo {
+  font-weight: bold;
+}
+
+/* Button */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+}
+
+/* Hero */
+.hero {
+  background: url('../img/hero-dog.jpg') center / cover no-repeat;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  padding: 72px 24px;
+  max-width: 600px;
+}
+
+/* Sections */
+.section {
+  padding: 64px 0;
+}
+
+.section-light {
+  background: var(--bg-light);
+}
+
+.section-title {
+  margin-bottom: 32px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Cards */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+/* Values */
+.value h3 {
+  margin-bottom: 8px;
+}
+
+/* Contact */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  font-family: inherit;
+}
+
+/* Footer */
+.footer {
+  background: #fafafa;
+  text-align: center;
+  padding: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-3,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .header-layout {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
